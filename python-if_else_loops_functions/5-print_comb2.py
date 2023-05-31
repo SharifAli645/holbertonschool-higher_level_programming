@@ -1,20 +1,7 @@
 #!/bin/python3
-e = 0
-i = 0
-var = ""
-var1 = ", "
-while i < 10:
-    print("{}{}".format(e, i), end="")
+for i in range(0, 100):
+    if i == 99:
+        print("{}".format(i))
 
-    if e == 9 and i == 9:
-        var = "\n"
-        var1 = ""
-    print("{}".format(var1), end=var)
-    if e == 9 and i == 9:
-        break
-
-    if e != 9 and i == 9:
-        i = 0
-        e = e + 1
     else:
-        i = i + 1
+        print("{:02}".format(i), end=", ")
