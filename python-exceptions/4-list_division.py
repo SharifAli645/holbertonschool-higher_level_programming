@@ -19,7 +19,7 @@ def list_division(my_list_1, my_list_2, list_length):
             msg = 'out of range'
             print(msg)
             res.append(0)
-        except Exception:
+        except ZeroDivisionError:
             msg = 'division by 0'
             print(msg)
             res.append(0)
