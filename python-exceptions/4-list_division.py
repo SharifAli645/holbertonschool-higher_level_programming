@@ -2,12 +2,7 @@
 def list_division(my_list_1, my_list_2, list_length):
     msg = ""
     res = list()
-    lon = 0
-    if len(my_list_1) > len(my_list_2):
-        lon = len(my_list_1)
-    else:
-        lon = len(my_list_2)
-    for i in range(lon):
+    for i in range(list_length):
         msg = ""
         try:
             res.append(my_list_1[i] / my_list_2[i])
