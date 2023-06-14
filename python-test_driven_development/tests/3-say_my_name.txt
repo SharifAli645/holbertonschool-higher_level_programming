@@ -4,3 +4,6 @@
 My name is Sharif Abuhadba
 >>> say_my_name('Sharif')
 My name is Sharif 
+>>> say_my_name(12, 'White')
+
+>>> 
