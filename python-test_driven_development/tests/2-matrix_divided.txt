@@ -1,0 +1,40 @@
+The ''2-matrix_divided'' module
+============================
+
+Using ''matrix_divided''
+---------------------
+
+This is an example text file . First import
+
+''matrix_divided'' from the ''2-matrix_divided'' module:
+>>> 
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> 
+>>> matrix_divided([1,2,3], 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> 
+>>> matrix_divided([[1,2],['a','b']], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> 
+>>> matrix_divided([[1,2,4],[3,9]], 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+>>> 
+>>> matrix_divided([[1,2,4],[3,9,20]], 'a')
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> 
+>>> matrix_divided([[1,2],[4,8]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> 
+>>> matrix_divided('string', 6)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
