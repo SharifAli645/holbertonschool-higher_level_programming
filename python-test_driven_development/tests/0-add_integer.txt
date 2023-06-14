@@ -14,6 +14,8 @@ This is an example text file . First import
 30
 >>> add_integer(-20, 40)
 20
+>>> add_integer(5.0, 4.0)
+9
 >>> add_integer('a', 'b')
 Traceback (most recent call last):
 ...
