@@ -14,7 +14,11 @@ This is an example text file . First import
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> 
+>>>
+>>> matrix_divided(None)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
 >>> matrix_divided([[1,2],['a','b']], 2)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
