@@ -16,7 +16,11 @@ This is an example text file . First import
 20
 >>> add_integer(5.0, 4.0)
 9
->>> add_integer('a', 'b')
+>>> add_integer(5.0, 4)
+9
+>>> add_integer(5, 4.5)
+9
+>>> add_integer('atr', 'teb')
 >>> add_integer('a', 3)
 >>> add_integer(3, 'b')
 >>> add_integer("cadena")
@@ -26,8 +30,7 @@ This is an example text file . First import
 >>> add_integer(2)
 100
 >>> add_integer(True)
->>> add_integer(4, 5)
-9
+>>> add_integer("4", "5")
 >>> add_integer(-4, -5)
 -9
 >>> add_integer(4, "cadena")
