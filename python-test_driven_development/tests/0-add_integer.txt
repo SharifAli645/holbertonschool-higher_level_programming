@@ -50,3 +50,19 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+>>> add_integer(4, 5)
+9
+>>> add_integer(-4, -5)
+-9
+>>> add_integer(4, "cadena")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer("cadena", 100)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer((4, 5), (0, 0))
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
