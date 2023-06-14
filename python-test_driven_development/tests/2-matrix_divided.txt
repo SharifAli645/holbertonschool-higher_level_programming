@@ -25,6 +25,21 @@ Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 >>>
+>>> matrix_divided('a')
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+>>>
+>>> matrix_divided(2.3)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+>>>
+>>> matrix_divided({'a': 45, 'b': 65}, 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>>
 >>> matrix_divided([1,2,3], 2)
 Traceback (most recent call last):
 ...
@@ -53,8 +68,8 @@ Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
 >>> 
->>> matrix_divided([[2,2],[4,8]], 2)
-[[1.0, 1.0], [2.0, 4.0]]
+>>> matrix_divided([[2,2],[4,8]], -2)
+[[-1.0, -1.0], [-2.0, -4.0]]
 >>>
 >>> matrix_divided('string', 6)
 Traceback (most recent call last):
