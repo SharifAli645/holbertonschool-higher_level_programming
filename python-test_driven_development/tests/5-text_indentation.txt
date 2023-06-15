@@ -21,5 +21,11 @@ TypeError: text must be a string
 hola
 >>> text_indentation("")
 
+>>> text_indentation("\n")
+<BLANKLINE>
 >>> text_indentation(" ")
-<BLANKLINE> 
+<BLANKLINE>
+>>> text_indentation("\n\n")
+<BLANKLINE>
+<BLANKLINE>
+>>> 
