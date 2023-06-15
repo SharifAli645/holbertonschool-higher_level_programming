@@ -8,7 +8,7 @@ def text_indentation(text):
     if type(text) not in [str]:
         raise TypeError("text must be a string")
     for char in text:
-        if last in ['.', '?', ':']:
+        if last in ['.', '?', ':'] and char == " ":
             last = ""
             continue
         print("{}".format(char), end="")
