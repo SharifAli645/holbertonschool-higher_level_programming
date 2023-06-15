@@ -19,8 +19,10 @@ Traceback (most recent call last):
 TypeError: text must be a string
 >>> text_indentation("hola")
 hola
->>> text_indentation("")
-
+>>> text_indentation('hola')
+hola
+>>> text_indentation('''hola''')
+hola
 >>> text_indentation("\n")
 <BLANKLINE>
 >>> text_indentation(" ")
@@ -40,7 +42,10 @@ TypeError: text must be a string
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
->>> text_indentation({"d": 45})
-Traceback (most recent call last):
-...
-TypeError: text must be a string
+>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?""")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+Utrum igitur tibi litteram videor an totas paginas commovere?
+<BLANKLINE>
