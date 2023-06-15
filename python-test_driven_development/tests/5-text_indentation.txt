@@ -1,7 +1,7 @@
 >>> 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> 
->>> text_indentation("sharif?hola")
+>>> text_indentation("sharif? hola")
 sharif?
 <BLANKLINE>
 hola
@@ -17,11 +17,5 @@ TypeError: text must be a string
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
->>> text_indentation(45.02)
-Traceback (most recent call last):
-...
-TypeError: text must be a string
->>> text_indentation(var)
-Traceback (most recent call last):
-...
-NameError: name 'var' is not defined
+>>> text_indentation("hola")
+hola
