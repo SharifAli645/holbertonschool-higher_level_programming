@@ -17,9 +17,11 @@ TypeError: text must be a string
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
->>> text_indentation(True)
+>>> text_indentation(45.02)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
->>> text_indentation("hola")
-hola
+>>> text_indentation(var)
+Traceback (most recent call last):
+...
+NameError: name 'var' is not defined
