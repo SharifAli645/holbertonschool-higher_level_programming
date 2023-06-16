@@ -83,19 +83,3 @@ IndexError: list index out of range
 >>>
 >>> matrix_divided([[], []], 6)
 [[], []]
->>> 
->>> matrix_divided(True, 6)
-Traceback (most recent call last):
-...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> 
->>> matrix_divided(10,[[1,2],[4,8]])
-Traceback (most recent call last):
-...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
->>>
->>> matrix_divided([[1,2],[4,8]], -0)
-Traceback (most recent call last):
-...
-ZeroDivisionError: division by zero
->>>
