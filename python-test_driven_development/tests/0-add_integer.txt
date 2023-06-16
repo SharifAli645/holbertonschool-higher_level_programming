@@ -12,19 +12,17 @@ This is an example text file . First import
 >>> 
 >>> add_integer(10, 20)
 30
->>> add_integer(-20, 40)
-20
+>>> add_integer(87987564987984, 564654987987654)
+652642552975638
 >>> add_integer(5.0, 4.0)
 9
->>> add_integer(5.0, 4)
-9
->>> add_integer(5, 4.5)
-9
->>> add_integer('atr', 'teb')
 >>> add_integer('a', 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
 >>> add_integer(3, 'b')
 >>> add_integer("cadena")
->>> add_integer("cadena", "cadena")
+>>> add_integer(float("NaN"))
 >>> add_integer(None)
 >>> add_integer()
 >>> add_integer(2)
