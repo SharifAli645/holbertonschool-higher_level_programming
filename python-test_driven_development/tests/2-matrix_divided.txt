@@ -83,3 +83,5 @@ IndexError: list index out of range
 >>>
 >>> matrix_divided([[], []], 6)
 [[], []]
+>>> matrix_divided([[2.3, 5], [2, 7]], float("inf"))
+[[0.0, 0.0], [0.0, 0.0]]
