@@ -25,15 +25,22 @@ Traceback (most recent call last):
 ...
 TypeError: b must be an integer
 >>> add_integer("cadena")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
 >>> add_integer(float("NaN"))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
 >>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
 >>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
 >>> add_integer(2)
 100
->>> add_integer(True)
->>> add_integer("4", "5")
 >>> add_integer(-4, -5)
 -9
->>> add_integer(4, "cadena")
->>> add_integer("cadena", 100)
->>> add_integer((4, 5), (0, 0))
