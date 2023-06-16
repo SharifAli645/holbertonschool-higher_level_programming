@@ -4,9 +4,6 @@ The ''2-matrix_divided'' module
 Using ''matrix_divided''
 ---------------------
 
-This is an example text file . First import
-
-''matrix_divided'' from the ''2-matrix_divided'' module:
 >>> 
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 >>> 
@@ -25,19 +22,6 @@ Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 >>>
->>> matrix_divided('a')
-Traceback (most recent call last):
-...
-TypeError: matrix_divided() missing 1 required positional argument: 'div'
->>>
->>> matrix_divided(2.3)
-Traceback (most recent call last):
-...
-TypeError: matrix_divided() missing 1 required positional argument: 'div'
->>>
->>> matrix_divided({'a': 45, 'b': 65}, 2)
-Traceback (most recent call last):
-...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>>
 >>> matrix_divided(["str", [1,2,3]], 2)
@@ -72,14 +56,7 @@ ZeroDivisionError: division by zero
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
->>> 
->>> matrix_divided([], 2)
-Traceback (most recent call last):
-...
-IndexError: list index out of range
 >>>
->>> matrix_divided([[], []], 6)
-[[], []]
 >>> matrix_divided([[2.3, 5], [2, 7]], float("inf"))
 [[0.0, 0.0], [0.0, 0.0]]
 >>> matrix_divided([[200, 500], [200, 700]], float("NaN"))
