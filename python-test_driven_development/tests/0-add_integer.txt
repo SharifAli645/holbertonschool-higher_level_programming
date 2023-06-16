@@ -44,3 +44,7 @@ TypeError: add_integer() missing 1 required positional argument: 'a'
 100
 >>> add_integer(-4, -5)
 -9
+>>> add_integer(float("-inf"), 1)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
