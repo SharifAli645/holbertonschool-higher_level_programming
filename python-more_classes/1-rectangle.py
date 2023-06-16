@@ -2,7 +2,7 @@
 """Represent geometric figures"""
 
 
-class Rectangle():
+class Rectangle:
     """Represent a rectangle"""
     def __init__(self, height=0, width=0):
         self.__height = height
