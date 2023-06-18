@@ -73,6 +73,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """Class method that returns a new Rectangle instance"""
         if not isinstance(size, int):
             raise TypeError("height must be an integer")
         if size < 0:
