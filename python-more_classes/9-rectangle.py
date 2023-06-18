@@ -12,6 +12,11 @@ class Rectangle:
         self.width = width
         Rectangle.number_of_instances += 1
 
+    @classmethod
+    def square(cls, size=0):
+        """Class method that returns a new Rectangle instance"""
+        return cls(size, size)
+
     @property
     def height(self):
         return self.__height
@@ -70,13 +75,3 @@ class Rectangle:
         if rect_2.area() > rect_1.area():
             return rect_2
         return rect_1
-
-    @classmethod
-    def square(cls, size=0):
-        """Class method that returns a new Rectangle instance"""
-        if not isinstance(size, int):
-            raise TypeError("height must be an integer")
-        if size < 0:
-            raise ValueError("height must be >= 0")
-        new_rectangle = Rectangle(size, size)
-        return new_rectangle
