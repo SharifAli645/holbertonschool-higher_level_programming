@@ -25,7 +25,7 @@ class Square:
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
@@ -54,12 +54,13 @@ class Square:
         Prints the square.
         """
         if self.__size == 0:
-            print("")
-        for e in range(self.__position[1]):
             print()
-        for i in range(self.__size):
-            for e in range(self.__position[0]):
-                print(" ", end="")
+        else:
+            for a in range(self.__position[1]):
+                print()
             for e in range(self.__size):
-                print("{}".format("#"), end="")
-            print("")
+                for i in range(self.__position[0]):
+                    print(" ", end="")
+                for o in range(self.__size):
+                    print("#", end="")
+                print()
