@@ -77,5 +77,5 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if size < 0:
             raise ValueError("height must be >= 0")
-        new_rectangle = cls(size, size)
+        new_rectangle = Rectangle(size, size)
         return new_rectangle
