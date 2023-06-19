@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-"""Represent geometric figures"""
-
-
 class Rectangle:
     """Represent a rectangle.
 
