@@ -13,6 +13,5 @@ def read_file(filename=""):
     Args:
         filename (string): the name's file
     """
-    fle = open(filename)
-    print(fle.read(), end="")
-    fle.close()
+    with open(filename) as fle:
+        print(fle.read(), end="")
