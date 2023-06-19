@@ -25,8 +25,8 @@ class Rectangle:
         Set the height and with of the rectangle
 
         Args:
-            width (int): The width of the rectangle
-            height (int): The height of the rectangle
+            width (int): The width
+            height (int): The height
 
         """
         self.width = width
@@ -49,12 +49,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """The getter method that returns the height of the rectangle"""
+        """getter method of the rectangle"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """The setter method that checks for height"""
+        """setter method"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         elif value < 0:
@@ -66,7 +66,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        """Computes the rectangle perimeter"""
+        """the rectangle perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
@@ -95,7 +95,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Static method that returns biggest rectangle based on the area"""
+        """Static method"""
         if type(rect_1) != Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif type(rect_2) != Rectangle:
