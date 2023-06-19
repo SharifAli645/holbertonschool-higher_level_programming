@@ -23,32 +23,10 @@ class Rectangle:
         self.width = width
         Rectangle.number_of_instances += 1
 
-    @classmethod
-    def square(cls, size=0):
-        """Return a new Rectangle with width and height equal to size.
-
-        Args:
-            size (int): The width and height of the new Rectangle.
-        """
-        return (cls(size, size))
-
-    @property
-    def height(self):
-        """Get/set the height of the Rectangle."""
-        return self.__height
-
     @property
     def width(self):
         """Get/set the width of the Rectangle."""
         return self.__width
-
-    @height.setter
-    def height(self, value):
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = value
 
     @width.setter
     def width(self, value):
@@ -57,6 +35,19 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
+    @property
+    def height(self):
+        """Get/set the height of the Rectangle."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
 
     def area(self):
         """Return the area of the Rectangle."""
@@ -108,3 +99,13 @@ class Rectangle:
         if rect_2.area() > rect_1.area():
             return rect_2
         return rect_1
+
+    @classmethod
+    def square(cls, size=0):
+        """Return a new Rectangle with width and height equal to size.
+
+        Returns:
+            A new Rectangle instance
+
+        """
+        return (cls(size, size))
