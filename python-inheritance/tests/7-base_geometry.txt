@@ -1,0 +1,16 @@
+The ''7-base_geometry'' module
+============================
+
+Using ''BaseGeometry''
+---------------------
+
+This is an example text file . First import
+
+''BaseGeometry'' from the ''7-base_geometry'' module:
+>>> bs = __import__('7-base_geometry').BaseGeometry()
+>>> bs.integer_validator("my int", 1)
+
+>>> bs.integer_validator("my int", "string")
+Traceback (most recent call last):
+...
+TypeError: my int must be an integer
