@@ -8,6 +8,8 @@ This is an example text file . First import
 
 ''MyList'' from the ''1-my_list.py'' module:
 >>> lista = __import__('1-my_list').MyList()
+>>> lista.print_sorted()
+[]
 >>> lista.append(5)
 >>> lista.print_sorted()
 [5]
