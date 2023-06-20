@@ -10,19 +10,26 @@ This is an example text file . First import
 >>> lista = __import__('1-my_list').MyList()
 >>> lista.print_sorted()
 []
+>>> lista.append(0)
+>>> lista.print_sorted()
+[0]
+>>> lista.append(0)
+>>> lista.append(0)
+>>> lista.print_sorted()
+[0, 0, 0]
 >>> lista.append(5)
 >>> lista.print_sorted()
-[5]
+[0, 0, 0, 5]
 >>> lista.append(1)
 >>> lista.print_sorted()
-[1, 5]
+[0, 0, 0, 1, 5]
 >>> lista.append(-9)
 >>> lista.print_sorted()
-[-9, 1, 5]
+[-9, 0, 0, 0, 1, 5]
 >>> lista.append(30000)
 >>> lista.print_sorted()
-[-9, 1, 5, 30000]
+[-9, 0, 0, 0, 1, 5, 30000]
 >>> lista.append(-80000)
 >>> lista.print_sorted()
-[-80000, -9, 1, 5, 30000]
+[-80000, -9, 0, 0, 0, 1, 5, 30000]
 >>> 
