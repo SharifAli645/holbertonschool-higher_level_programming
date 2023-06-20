@@ -1,0 +1,26 @@
+The ''1-my_list.py'' module
+============================
+
+Using ''print_sorted''
+---------------------
+
+This is an example text file . First import
+
+''MyList'' from the ''1-my_list.py'' module:
+>>> lista = __import__('1-my_list').MyList()
+>>> lista.append(5)
+>>> lista.print_sorted()
+[5]
+>>> lista.append(1)
+>>> lista.print_sorted()
+[1, 5]
+>>> lista.append(-9)
+>>> lista.print_sorted()
+[-9, 1, 5]
+>>> lista.append(30000)
+>>> lista.print_sorted()
+[-9, 1, 5, 30000]
+>>> lista.append(-80000)
+>>> lista.print_sorted()
+[-80000, -9, 1, 5, 30000]
+>>> 
