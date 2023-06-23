@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Module
-that defines
-geometric figures
+Class Square that inherits from Rectangle class,
+size must be private and must be a positive integer and
+the area() must be implemented
 """
 
 
