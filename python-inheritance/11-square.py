@@ -11,9 +11,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
     """
-    Class
-    that defines
-    a Square
+    Class that defines a Square
     """
     def __init__(self, size):
         """Constructor of Square class
@@ -38,5 +36,4 @@ class Square(Rectangle):
 
         Returns: representation of the instance
         """
-        msg = "[Rectangle] {}/{}"
-        return msg.format(self.__size, self.__size)
+        return f"[Square] {self.__size}/{self.__size}"
