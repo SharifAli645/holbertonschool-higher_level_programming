@@ -24,3 +24,8 @@ TypeError: print_sorted() missing 1 required positional argument: 'self'
 Traceback (most recent call last):
 ...
 TypeError: '<' not supported between instances of 'str' and 'int'
+>>> lista.print_sorted(None)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not subscriptable
+
