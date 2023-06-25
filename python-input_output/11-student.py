@@ -45,6 +45,5 @@ class Student:
         Args:
             json (dictionary): attributes of an instance
         """
-        self.first_name = json.get("first_name")
-        self.last_name = json.get("last_name")
-        self.age = age = json.get("age")
+        reep = self.__dict__
+        return reep.update(json)
