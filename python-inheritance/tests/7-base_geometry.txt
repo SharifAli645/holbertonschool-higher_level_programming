@@ -60,3 +60,7 @@ TypeError: sas must be an integer
 Traceback (most recent call last):
 ...
 TypeError: sas must be an integer
+>>> bs.integer_validator("sas", {"sas": 56, "sos": 67})
+Traceback (most recent call last):
+...
+TypeError: sas must be an integer
