@@ -34,3 +34,7 @@ ValueError: sas must be greater than 0
 Traceback (most recent call last):
 ...
 TypeError: None must be an integer
+>>> bs.integer_validator("sas", True)
+Traceback (most recent call last):
+    ...
+TypeError: sas must be an integer
