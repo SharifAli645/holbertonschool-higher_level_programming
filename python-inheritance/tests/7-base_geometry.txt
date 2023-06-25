@@ -22,3 +22,11 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> bs.integer_validator("sas", -5)
+Traceback (most recent call last):
+    ...
+ValueError: sas must be greater than 0
+>>> bs.integer_validator("sas", 0)
+Traceback (most recent call last):
+    ...
+ValueError: sas must be greater than 0
