@@ -32,4 +32,8 @@ This is an example text file . First import
 >>> lista.append(-80000)
 >>> lista.print_sorted()
 [-80000, -9, 0, 0, 0, 1, 5, 30000]
->>> 
+>>> lista.append('10')
+>>> lista.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'str' and 'int'
