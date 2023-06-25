@@ -34,3 +34,7 @@ TypeError: 'NoneType' object is not subscriptable
 [inf]
 >>> lista.print_sorted([float("NaN")])
 [nan]
+>>> lista.print_sorted(self)
+Traceback (most recent call last):
+...
+NameError: name 'self' is not defined
