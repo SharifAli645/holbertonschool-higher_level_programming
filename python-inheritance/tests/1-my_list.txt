@@ -7,33 +7,20 @@ Using ''print_sorted''
 This is an example text file . First import
 
 ''MyList'' from the ''1-my_list.py'' module:
->>> lista = __import__('1-my_list').MyList()
+>>> lista = __import__('1-my_list').MyList
 >>> lista.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: print_sorted() missing 1 required positional argument: 'self'
+>>> lista.print_sorted([])
 []
->>> lista.append(0)
->>> lista.print_sorted()
-[0]
->>> lista.append(0)
->>> lista.append(0)
->>> lista.print_sorted()
-[0, 0, 0]
->>> lista.append(5)
->>> lista.print_sorted()
-[0, 0, 0, 5]
->>> lista.append(1)
->>> lista.print_sorted()
-[0, 0, 0, 1, 5]
->>> lista.append(-9)
->>> lista.print_sorted()
-[-9, 0, 0, 0, 1, 5]
->>> lista.append(30000)
->>> lista.print_sorted()
-[-9, 0, 0, 0, 1, 5, 30000]
->>> lista.append(-80000)
->>> lista.print_sorted()
-[-80000, -9, 0, 0, 0, 1, 5, 30000]
->>> lista.append('10')
->>> lista.print_sorted()
+>>> lista.print_sorted([0, 0, 0, 0, 0])
+[0, 0, 0, 0, 0]
+>>> lista.print_sorted([-5, -99, -89, 123, -789])
+[-789, -99, -89, -5, 123]
+>>> lista.print_sorted([1.45, 1.89, -8.45])
+[-8.45, 1.45, 1.89]
+>>> lista.print_sorted([1, '10', 4])
 Traceback (most recent call last):
 ...
 TypeError: '<' not supported between instances of 'str' and 'int'
