@@ -40,5 +40,9 @@ Traceback (most recent call last):
 TypeError: sas must be an integer
 >>> bs.integer_validator("sas", float("inf"))
 Traceback (most recent call last):
-    ...
+...
+TypeError: sas must be an integer
+>>> bs.integer_validator("sas", float("NaN"))
+Traceback (most recent call last):
+...
 TypeError: sas must be an integer
