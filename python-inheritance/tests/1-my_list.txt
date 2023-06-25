@@ -30,4 +30,7 @@ Traceback (most recent call last):
 TypeError: 'NoneType' object is not subscriptable
 >>> lista.print_sorted([None])
 [None]
-
+>>> lista.print_sorted([float("inf")])
+[inf]
+>>> lista.print_sorted([float("NaN")])
+[nan]
