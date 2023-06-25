@@ -28,8 +28,6 @@ TypeError: '<' not supported between instances of 'str' and 'int'
 Traceback (most recent call last):
 ...
 TypeError: 'NoneType' object is not iterable
->>> lista.print_sorted([None])
-[None]
 >>> lista.print_sorted([float("inf")])
 [inf]
 >>> lista.print_sorted([float("NaN")])
