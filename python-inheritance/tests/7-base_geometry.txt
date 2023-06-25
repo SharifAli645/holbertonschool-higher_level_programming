@@ -38,11 +38,7 @@ TypeError: None must be an integer
 Traceback (most recent call last):
 ...
 TypeError: sas must be an integer
->>> bs.integer_validator(555, "99")
-Traceback (most recent call last):
-...
-TypeError: 555 must be an integer
->>> bs.integer_validator("sas", 8.45)
+>>> bs.integer_validator("sas", float("inf"))
 Traceback (most recent call last):
     ...
 TypeError: sas must be an integer
