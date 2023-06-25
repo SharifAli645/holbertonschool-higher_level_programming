@@ -36,3 +36,5 @@ TypeError: 'NoneType' object is not iterable
 Traceback (most recent call last):
 ...
 NameError: name 'self' is not defined
+>>> lista.print_sorted([None])
+[None]
