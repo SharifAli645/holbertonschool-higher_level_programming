@@ -14,6 +14,4 @@ class MyList(list):
         Function that print an ordered list
 
         """
-        new = self[:]
-        new.sort()
-        print(new)
+        print(sorted(self))
