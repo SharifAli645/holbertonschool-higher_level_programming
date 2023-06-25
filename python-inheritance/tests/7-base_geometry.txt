@@ -48,7 +48,15 @@ Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> bs.integer_validator("sas", 100)
 
->>> bs.integer_validator("sas", [5, 5])
+>>> bs.integer_validator([5], 43, 49)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+>>> bs.integer_validator("sas", (45, 54, 59))
+Traceback (most recent call last):
+...
+TypeError: sas must be an integer
+>>> bs.integer_validator("sas", {65, 67, 79})
 Traceback (most recent call last):
 ...
 TypeError: sas must be an integer
