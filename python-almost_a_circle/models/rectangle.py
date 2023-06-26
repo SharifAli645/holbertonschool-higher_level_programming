@@ -81,16 +81,16 @@ class Rectangle(Base):
 
     def area(self):
         """Function that calculates the area of the rectangle"""
-        return (self.width * self.height)
+        return (self.__width * self.__height)
 
     def display(self):
         """Function that prints the rectangle"""
-        for i in range(self.height):
-            for e in range(self.width):
+        for i in range(self.__height):
+            for e in range(self.__width):
                 print('#', end='')
             print()
 
     def __str__(self):
         """Overriding the str method"""
         return f"""[{self.__class__.__name__}] ({self.id}) \
-                {self.__x}/{self.__y} - {self.__width}/{self.__height}"""
+{self.__x}/{self.__y} - {self.__width}/{self.__height}"""
