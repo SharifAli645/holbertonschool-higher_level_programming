@@ -1,5 +1,16 @@
 #!/usr/bin/python3
+"""
+Module
+that contain
+function
+Pascal Triangle
+"""
+
+
 def pascal_triangle(n):
+    """
+    Return a matrix of integers representing the Pascal's triangle of n
+    """
     if n <= 0:
         return []
     lista = [1]
