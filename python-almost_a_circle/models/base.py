@@ -6,6 +6,8 @@ a base
 Class
 """
 
+import json
+
 
 class Base:
     """Class base"""
@@ -23,3 +25,8 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Static method that returns a JSON string"""
+        return json.dumps(list_dictionaries)
