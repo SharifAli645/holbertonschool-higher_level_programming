@@ -41,5 +41,5 @@ class Base:
         if list_objs is not None:
             for ele in list_objs:
                 new.append(ele.to_dictionary())
-            with open("{}.json".format(cls.__name__), 'w') as fle:
-                fle.write(cls.to_json_string(new))
+        with open("{}.json".format(cls.__name__), 'w') as fle:
+            fle.write(cls.to_json_string(new))
