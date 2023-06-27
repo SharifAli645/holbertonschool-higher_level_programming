@@ -127,3 +127,9 @@ class Rectangle(Base):
                     self.__x = value
                 elif 'y' == key:
                     self.__y = value
+
+    def to_dictionary(self):
+        """Function that returns a dictionary with all attributes
+        of the instance"""
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
