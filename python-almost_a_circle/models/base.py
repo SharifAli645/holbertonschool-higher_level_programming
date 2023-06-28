@@ -68,7 +68,11 @@ class Base:
         """
         Class method that returns a list of instances
         """
-        with open("{}.json".format(cls.__name__), 'r') as fle:
+        from os import path
+        fl = "{}.json".format(cls.__name__)
+        if not path.isfile(fl):
+            return []
+        with open(fl, 'r', encoding="utf-8") as fle:
             lista = cls.from_json_string(fle.read())
             for index in range(len(lista)):
                 lista[index] = cls.create(**lista[index])
