@@ -62,3 +62,14 @@ class Base:
 
         clase.update(**dictionary)
         return clase
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Class method that returns a list of instances
+        """
+        with open("{}.json".format(cls.__name__), 'r') as fle:
+            lista = cls.from_json_string(fle.read())
+            for index in range(len(lista)):
+                lista[index] = cls.create(**lista[index])
+            return lista
