@@ -43,3 +43,10 @@ class Base:
                 new.append(ele.to_dictionary())
         with open("{}.json".format(cls.__name__), 'w') as fle:
             fle.write(cls.to_json_string(new))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Static method that returns a list"""
+        if json_string is None or not json_string:
+            return []
+        return json.loads(json_string)
