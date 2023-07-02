@@ -8,6 +8,7 @@ from models.square import Square
 class TestBase(unittest.TestCase):
 
     def test_id(self):
+        Base._Base__nb_objects = 0
         self.assertEqual(Base().id, 1)
         self.assertEqual(Base(6).id, 6)
         self.assertEqual(Base(-6).id, -6)
@@ -47,11 +48,13 @@ class TestBase(unittest.TestCase):
         j_int = Rectangle.to_json_string(l_int)
         l_out = Rectangle.from_json_string(j_int)
         self.assertEqual(l_int, l_out)
+        self.assertAlmostEqual(list, type(l_out))
 
         l_int = [{'id': 8, 'size': 400}]
         j_int = Square.to_json_string(l_int)
         l_out = Square.from_json_string(j_int)
         self.assertEqual(l_int, l_out)
+        self.assertAlmostEqual(list, type(l_out))
 
         l_int = [
                 {'id': 8, 'width': 100, 'height': 400},
@@ -67,5 +70,13 @@ class TestBase(unittest.TestCase):
                 ]
         j_int = Square.to_json_string(l_int)
         l_out = Square.from_json_string(j_int)
-        self.assertEqual(l_int, l_out) 
+        self.assertEqual(l_int, l_out)
 
+    def test_create(self):
+        dicty = {'width': 1, 'height': 3, 'x': 2, 'y': 2, 'id': 66}
+        r = Rectangle.create(**dicty)
+        self.assertDictEqual(r.to_dictionary(), dicty)
+
+        dicty = {'size': 3, 'x': 2, 'y': 2, 'id': 67}
+        s = Square.create(**dicty)
+        self.assertDictEqual(s.to_dictionary(), dicty)
