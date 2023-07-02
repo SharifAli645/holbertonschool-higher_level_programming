@@ -1,5 +1,6 @@
 import unittest
 import json
+import pep8
 
 from models.base import Base
 from models.rectangle import Rectangle
@@ -80,3 +81,30 @@ class TestBase(unittest.TestCase):
         dicty = {'size': 3, 'x': 2, 'y': 2, 'id': 67}
         s = Square.create(**dicty)
         self.assertDictEqual(s.to_dictionary(), dicty)
+
+    def test_load_from_file(self):
+        r1 = Rectangle(4, 8, 16, 32, 64)
+        r2 = Rectangle(3, 6, 12, 24, 42)
+        Rectangle.save_to_file([r1, r2])
+        l = Rectangle.load_from_file()
+        self.assertDictEqual(l[0].to_dictionary(), r1.to_dictionary())
+        self.assertEqual(type(l[0]), Rectangle)
+        self.assertDictEqual(l[1].to_dictionary(), r2.to_dictionary())
+        self.assertEqual(type(l[1]), Rectangle)
+        self.assertTrue(type(l) == list)
+
+        s1 = Square(6, 12, 24, 48)
+        s2 = Square(7, 14, 28, 56)
+        Square.save_to_file([s1, s2])
+        l = Square.load_from_file()
+        self.assertDictEqual(l[0].to_dictionary(), s1.to_dictionary())
+        self.assertEqual(type(l[0]), Square)
+        self.assertDictEqual(l[1].to_dictionary(), s2.to_dictionary())
+        self.assertEqual(type(l[0]), Square)
+        self.assertTrue(type(l) == list)
+
+    def test_pep8(self):
+        """checks pep 8"""
+        p8 = pep8.StyleGuide(quiet=True)
+        outcome = p8.check_files(['models/base.py',
+                                'tests/test_models/test_base.py'])
