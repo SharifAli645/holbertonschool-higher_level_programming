@@ -20,3 +20,21 @@ class TestBase(unittest.TestCase):
         j_str = json.dumps([{'width': 4, 'height': 5}])
         self.assertEqual(Base.to_json_string([{'width': 4,
                                              'height': 5}]), j_str)
+
+    def test_save_to_file(self):
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
+        
+        Square.save_to_file([])
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
+
+        r1 = Rectangle(10, 5, 1, 12)
+        r2 = Rectangle(4, 6)
+        dicty = [r1.to_dictionary(), r2.to_dictionary()]
+        Rectangle.save_to_file([r1, r2])
+
+        with open("Rectangle.json", "r") as f:
+            j_dicty = json.loads(f.read())
+        self.assertTrue(dicty == j_dicty)
