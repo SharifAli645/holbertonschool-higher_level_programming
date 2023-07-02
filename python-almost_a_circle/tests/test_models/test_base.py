@@ -38,3 +38,34 @@ class TestBase(unittest.TestCase):
         with open("Rectangle.json", "r") as f:
             j_dicty = json.loads(f.read())
         self.assertTrue(dicty == j_dicty)
+
+    def test_from_json_string(self):
+        self.assertEqual(Base.from_json_string(None), [])
+        self.assertEqual(Base.from_json_string('[]'), [])
+
+        l_int = [{'id': 8, 'width': 100, 'height': 400}]
+        j_int = Rectangle.to_json_string(l_int)
+        l_out = Rectangle.from_json_string(j_int)
+        self.assertEqual(l_int, l_out)
+
+        l_int = [{'id': 8, 'size': 400}]
+        j_int = Square.to_json_string(l_int)
+        l_out = Square.from_json_string(j_int)
+        self.assertEqual(l_int, l_out)
+
+        l_int = [
+                {'id': 8, 'width': 100, 'height': 400},
+                {'id': 7, 'width': 10, 'height': 40}
+                ]
+        j_int = Rectangle.to_json_string(l_int)
+        l_out = Rectangle.from_json_string(j_int)
+        self.assertEqual(l_int, l_out)
+
+        l_int = [
+                {'id': 8, 'size': 400},
+                {'id': 7, 'size': 40}
+                ]
+        j_int = Square.to_json_string(l_int)
+        l_out = Square.from_json_string(j_int)
+        self.assertEqual(l_int, l_out) 
+
