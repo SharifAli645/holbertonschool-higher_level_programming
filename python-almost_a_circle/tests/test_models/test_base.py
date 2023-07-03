@@ -48,11 +48,11 @@ class TestBase(unittest.TestCase):
             j_dicty = json.loads(f.read())
         self.assertTrue(dicty == j_dicty)
 
-        Rectangle.save_to_file([])
+        Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as f:
             self.assertEqual("[]", f.read())
 
-        Rectangle.save_to_file(None)
+        Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as f:
             self.assertEqual("[]", f.read())
 
