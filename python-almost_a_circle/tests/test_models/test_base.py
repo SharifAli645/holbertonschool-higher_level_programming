@@ -29,16 +29,11 @@ class TestBase(unittest.TestCase):
         self.assertEqual(Base.to_json_string([{'width': 4,
                                              'height': 5}]), j_str)
 
-    def test_none_save_to_file(self):
-        Square.save_to_file(None)
-        with open("Square.json", "r") as f:
-            self.assertEqual("[]", f.read())
+    def test_save_to_file(self):
+        s1 = Square(10, 5, 1)
+        s2 = Square(4)
+        dicty = [s1.to_dictionary(), s2.to_dictionary()]
 
-        Rectangle.save_to_file(None)
-        with open("Rectangle.json", "r") as f:
-            self.assertEqual("[]", f.read())
-
-    def test_empty_save_to_file(self):
         Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
@@ -47,7 +42,6 @@ class TestBase(unittest.TestCase):
         with open("Rectangle.json", "r") as f:
             self.assertEqual("[]", f.read())
 
-    def test_multiple_instances(self):
         r1 = Rectangle(10, 5, 1, 12)
         r2 = Rectangle(4, 6)
         dicty = [r1.to_dictionary(), r2.to_dictionary()]
@@ -56,6 +50,14 @@ class TestBase(unittest.TestCase):
         with open("Rectangle.json", "r") as f:
             j_dicty = json.loads(f.read())
         self.assertTrue(dicty == j_dicty)
+
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
+
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
 
     def test_from_json_string(self):
         self.assertEqual(Base.from_json_string(None), [])
