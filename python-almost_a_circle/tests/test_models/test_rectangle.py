@@ -39,8 +39,11 @@ class TestRectangle(TestCase):
         Base._Base__nb_objects = 0
         r = Rectangle(20, 20)
         self.assertRaises(ValueError, Rectangle, -2, 2)
+        self.assertRaises(ValueError, Rectangle, 2, -2)
+        self.assertRaises(ValueError, Rectangle, 2, 0)
         self.assertRaises(ValueError, Rectangle, 0, 2)
         self.assertRaises(ValueError, Rectangle, 2, 2, -3, 2)
+        self.assertRaises(ValueError, Rectangle, 2, 2, 3, -2)
 
     def test_types(self):
         self.assertRaises(TypeError, Rectangle, "2", 2)
