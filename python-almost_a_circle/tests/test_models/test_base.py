@@ -41,11 +41,15 @@ class TestBase(unittest.TestCase):
         r1 = Rectangle(10, 5, 1, 12)
         r2 = Rectangle(4, 6)
         dicty = [r1.to_dictionary(), r2.to_dictionary()]
-        Rectangle.save_to_file([r1, r2])
 
+        Rectangle.save_to_file([r1, r2])
         with open("Rectangle.json", "r") as f:
             j_dicty = json.loads(f.read())
         self.assertTrue(dicty == j_dicty)
+
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
 
     def test_from_json_string(self):
         self.assertEqual(Base.from_json_string(None), [])
