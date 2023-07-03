@@ -30,11 +30,12 @@ class TestBase(unittest.TestCase):
                                              'height': 5}]), j_str)
 
     def test_save_to_file(self):
-        Square.save_to_file(None)
+
+        Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 
-        Square.save_to_file([])
+        Square.save_to_file(None)
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 
@@ -48,6 +49,10 @@ class TestBase(unittest.TestCase):
         self.assertTrue(dicty == j_dicty)
 
         Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
+
+        Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as f:
             self.assertEqual("[]", f.read())
 
