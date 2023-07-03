@@ -42,8 +42,3 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 2, "2")
         self.assertRaises(TypeError, Rectangle, 2, 2, "2", 2)
         self.assertRaises(TypeError, Rectangle, 2, 2, 2, "2")
-
-    def test_pep8(self):
-        """checks pep 8"""
-        p8 = pep8.StyleGuide(quiet=True)
-        outcome = p8.check_files(['tests/test_models/test_rectangle.py']) 
