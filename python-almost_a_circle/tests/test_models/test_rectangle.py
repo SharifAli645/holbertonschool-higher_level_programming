@@ -3,7 +3,7 @@
 
 import unittest
 import json
-import pep8
+import pycodestyle
 
 from models.base import Base
 from models.rectangle import Rectangle
@@ -17,6 +17,7 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 1)
         self.assertRaises(TypeError, Rectangle, 1, 2, 3, 4, 5, 6)
 
+        Base._Base__nb_objects = 0
         self.assertEqual(Rectangle(2, 4).id, 1)
         self.assertEqual(Rectangle(3, 6).id, 2)
 
@@ -46,3 +47,10 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, Rectangle, 2, "2")
         self.assertRaises(TypeError, Rectangle, 2, 2, "2", 2)
         self.assertRaises(TypeError, Rectangle, 2, 2, 2, "2")
+
+    def test_area(self):
+        self.assertEqual(Rectangle(2, 4).area(), 8)
+        self.assertEqual(Rectangle(10, 10).area(), 100)
+
+    def test_display(self):
+        pass
