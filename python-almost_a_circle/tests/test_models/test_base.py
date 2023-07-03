@@ -31,11 +31,11 @@ class TestBase(unittest.TestCase):
 
     def test_save_to_file(self):
 
-        Square.save_to_file([])
+        Square.save_to_file(None)
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 
-        Square.save_to_file(None)
+        Square.save_to_file([])
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 
